@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Viewport (Mobile Responsive) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Twitter Card (Twitter/X share preview) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My Page" />
+  <meta name="twitter:description" content="Your description for Twitter." />
+  <meta name="twitter:image" content="https://yourwebsite.com/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="OIP.jpeg" />
+
+  <!-- Theme Color (Mobile address bar color) -->
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Apple iOS (iPhone/iPad) -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  <!-- PWA / Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- Preconnect (Performance boost for fonts/APIs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:title" content="My Page" />
+  <meta property="og:description" content="Your website description for social media." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourwebsite.com" />
+  <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />
+  <!-- Canonical URL (Avoid duplicate pages) -->
+  <link rel="canonical" href="https://yourwebsite.com" />
+  <!-- Robots (SEO indexing rules) -->
+  <meta name="robots" content="index, follow" />
+  <!-- Author -->
+  <meta name="author" content=" Ashlok Kumar" />
+
+  <!-- SEO Basic -->
+  <meta name="description" content="Short website description (140–160 characters)." />
+  <meta name="keywords" content="keyword1, keyword2, keyword3" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>Atm Simulator System</title>
+  <!-- Charset & Security -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <link rel="stylesheet" href="style.css"  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- header :bank name -->
+     <div class="header">
+      <h1 class="bank-name">BEACON BANK</h1>
+     </div>
+  <div class="main-container">
+             <!--top screen   -->
+    <div class="screen-area">
+      <!-- screen-1 -->
+      <div class="screen-inner" id="screen-acc">
+        <h2>Welcome to the ATM</h2>
+        <p class="muted">Enter your account number</p>
+        <input inputmode="numeric" id="accNumber" maxlength="8" placeholder=" 12345678" aria-label="Account number" />
+        <button id="accSubmit" type="submit">Insert Card / Submit</button>
+        <p class="note">Demo accounts: <strong>12345678</strong></p>
+      </div>  
+      
+      <!-- process icon -->
+      <div class="screen-inner  hidden" id="process-icon">
+        <div class="circle"></div>
+      </div>
+
+      <!-- screen-2 -->
+      <div class="screen-inner hidden" id="screen-pin">
+        <h2>Enter PIN</h2>
+        <p class="muted">For account: <span id="accLabel"></span></p>
+        <input inputmode="numeric" id="pinInput" maxlength="4" placeholder="4-digit PIN" aria-label="PIN" />
+        <div class="row" style="width:100%">
+          <button id="pinSubmit">Submit PIN</button>
+          <button id="ejectBtn" class="right">Eject</button>
+        </div>
+        <p id="pinMsg" class="note"></p>
+      </div>
+      <!-- screen-3 -->
+      <div class="screen-inner hidden" id="screen-menu">
+        <h2 id="welcomeName">Welcome</h2>
+        <p class="muted">Choose your action</p>
+        <div class="menu">
+          <!-- <button style="color: black;" title="Withdraw Cash" id="btnWithdraw">Withdraw Cash</button>
+          <button style="color: black;" title="Deposit Cas" id="btnDeposit">Deposit Cash</button>
+          <button style="color: black;" title="Balance Enquiry" id="btnBalance">Balance Enquiry</button>
+          <button style="color: black;" title="Change PIN" id="btnChangePin">Change PIN</button>
+          <button style="color: black;" title="Exit" id="btnLogout">Exit</button> -->
+        </div>
+        <p id="menuNote" class="note"></p>
+      </div>
+        <!-- screen-3.1 -->
+        <div class="screen-inner hidden" id="screen-withdraw">
+          <h2>Withdraw</h2>
+          <p class="muted">Available balance: ₹<span id="availBalW"></span></p>
+          <input type="number" id="withdrawAmt" min="100" step="100" placeholder="Enter amount (min ₹100)" />
+          <div class="row" style="width:100%">
+            <button id="withdrawSubmit">Withdraw</button>
+            <button id="withdrawBack" class="right">Back</button>
+          </div>
+          <p id="withdrawMsg" class="note"></p>
+        </div>
+        <!-- screen -4.2 -->
+        <div class="screen-inner hidden" id="screen-deposit">
+          <h2>Deposit</h2>
+          <p class="muted">You may deposit any amount</p>
+          <input type="number" id="depositAmt" min="1" placeholder="Enter deposit amount" />
+          <div class="row" style="width:100%">
+            <button id="depositSubmit">Deposit</button>
+            <button id="depositBack" class="right">Back</button>
+          </div>
+          <p id="depositMsg" class="note"></p>
+        </div>
+        <!-- screen-4.3 -->
+        <div class="screen-inner hidden" id="screen-balance">
+          <h2>Balance</h2>
+          <p class="muted">Account: <span id="balAcc"></span></p>
+          <p style="font-size:1.3rem">₹<span id="balAmount"></span></p>
+          <button id="balBack">Back</button>
+        </div>
+        <!-- screen-4.4 -->
+        <div class="screen-inner hidden" id="screen-success">
+          <h2>Transaction Success</h2>
+          <p class="muted" id="successText">Collect your cash</p>
+          <button id="successOk">OK</button>
+        </div>
+        <!-- screen-4.5 -->
+        <div class="screen-inner hidden" id="screen-change-pin">
+          <h2>Change PIN</h2>
+          <input type="password" id="newPin" maxlength="4" placeholder="New 4-digit PIN" />
+          <input type="password" id="confirmPin" maxlength="4" placeholder="Confirm PIN" />
+          <div class="row" style="width:100%">
+            <button id="changePinSubmit">Change</button>
+            <button id="changePinBack" class="right">Back</button>
+          </div>
+          <p id="changePinMsg" class="note"></p>
+        </div>
+        <!-- screen-4.6 -->
+        <div class="screen-inner hidden" id="screen-error">
+          <h2>Error</h2>
+          <p class="muted" id="errText">Something went wrong</p>
+          <button id="errOk">OK</button>
+        </div>
+        <!-- MINI STATEMENT SCREEN -->
+        <div id="screen-mini" class="screen-inner hidden ">
+            <h2 class="title">Mini Statement</h2>
+
+            <div class="mini-box">
+                <div id="miniList" class="mini-list">
+                    <!-- Last 6 transactions will appear here -->
+                </div>
+            </div>
+
+            <button id="miniBack" class="btn-back">Back</button>
+        </div>
+
+
+    </div>
+    <!-- SIDES (buttons) -->
+    <div class="sides">
+      <div class="side-col">
+        <button class="side-btn"  id="Withdrawal">
+          <img src="withdrawal.png" alt="withdrawal"> <br>
+          <span id="Withdrawalmsg" class="hide" >Cash Withdrawal</span>
+        </button>
+        <button class="side-btn"  id="balence"  style="padding-left: 0.1rem;padding-top: 0.1rem;">
+          <img src="balence.png" alt="balence"> <br>
+          <span id="balencemsg" class="hide" >Check Balance</span>
+        </button>
+        <button class="side-btn"  id="changepin" style="padding-left: 0.1rem;">
+          <img src="pinchange.png" alt="pinchange-icon"> <br>
+          <span id="changepinmsg" class="hide" style="left: 11.2rem;">Change PIN</span>
+        </button>
+      </div>
+      <div class="side-col">
+        <button class="side-btn"  id="casedeposite" >
+          <img src="casedeposite.png" alt="casedeposite" style="padding: .1rem;">  <br>
+          <span id="casedepositemsg" class="hide" >Case Deposite</span>
+        </button>
+        <button class="side-btn"  id="ministatement">
+          <img src="ministatement.png" alt="ministatement" style="padding: .15rem;"> <br>
+          <span id="ministatementmsg" class="hide" >Mini Statement</span>
+        </button>
+        <button class="side-btn"  id="exit">
+          <img src="exit.png" alt="exit-icon" style="padding: .15rem;"> <br>
+          <span id="exitmsg" class="hide" >Exit</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- CARD / INDICATOR -->
+    <div class="card-slot">
+      <div class="indicator" aria-hidden="true"></div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="bottom">
+      <div class="cash-slot" id="cashSlot">No cash</div>
+      <button id="helpBtn" title="Help">!</button>
+    </div>
+  </div>
+  <footer>
+    written By: Ashlok Kumar <br>
+    Contact me at ashlok@gmail.com
+  </footer>
+  <script src="index.js"></script>
+   
+</body>
+</html>
