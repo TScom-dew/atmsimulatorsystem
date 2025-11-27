@@ -27,7 +27,7 @@
     .bank-name {
       width:360px;
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.5rem;
       /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
       font-family:Verdana, Geneva, Tahoma, sans-serif;
       color: #2563eb;
@@ -326,3 +326,4 @@
         }
 
     }
+
