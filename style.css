@@ -329,7 +329,7 @@
           }
           .card-slot{
             border-top:1px dashed rgba(2,6,23,0.04);
-            padding:.5rem;
+            /* padding:.5rem; */
             }
             .indicator{
             width:60%;
@@ -360,4 +360,5 @@
 
 
     }
+
 
