@@ -39,7 +39,7 @@
       /* background-image: radial-gradient(120deg, blue, red); */
       background-clip: text;
       color:transparent;
-      /* display: none; */
+      display: none;
     }
     /* Top screen */
     .screen-area{
