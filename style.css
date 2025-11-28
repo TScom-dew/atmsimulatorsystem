@@ -298,8 +298,10 @@
     /* responsive */
     @media (max-width:435px){
         body{
-          height:90%;
-          width:90%;
+          /* height:90%; */
+          width:100%;
+              padding-left:0.5rem;
+              padding-right:0.5rem;
         }
         .screen-area{
           padding: .5rem;
@@ -360,6 +362,7 @@
 
 
     }
+
 
 
 
