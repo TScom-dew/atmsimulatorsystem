@@ -50,14 +50,14 @@
 
     .screen-area .screen-inner{
       background:linear-gradient(180deg,#0b1220, #0f1724);border-radius:10px;
-        padding:.1rem 1rem .1rem 1rem;
+        padding: 1rem;
         min-height:160px;
         display:flex;
         flex-direction:column;
         justify-content:center;
         align-items:center;
         gap: 10px;
-        margin-top: 1rem;
+        margin: 1rem 1rem .1rem 1rem;
     }
     .screen-area h2{
       margin:0px;
@@ -218,7 +218,7 @@
         display:flex;
         align-items:center;
         justify-content:center;
-        padding:  0.5rem;
+        padding:  1rem;
         border-top:1px dashed rgba(2,6,23,0.04);
         }
         .indicator{
@@ -236,7 +236,7 @@
         padding:.4rem;
         }
         .cash-slot{
-        height:35px;
+        height:30px;
         min-width:50%;
         background:linear-gradient(180deg,#f8fafc,#eef2ff);border-radius:8px;
         border:1px solid rgba(2,6,23,0.04);
