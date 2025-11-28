@@ -298,7 +298,7 @@
     /* responsive */
     @media (max-width:435px){
         body{
-          height:95%;
+          height:90%;
           width:100%;
         }
         .screen-area{
@@ -360,4 +360,5 @@
 
 
     }
+
 
