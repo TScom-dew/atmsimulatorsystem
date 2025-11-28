@@ -17,7 +17,7 @@
     }
     .main-container{
       width:350px;
-      /* min-height: 100vh; */
+      
       background:linear-gradient(180deg,#eef2f6,#fff);
       border-radius:18px;
       box-shadow:0 10px 30px rgba(16,24,40,0.12);
@@ -29,14 +29,14 @@
       width:360px;
       text-align: center;
       font-size: 2rem;
-      /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+     
       font-family:Verdana, Geneva, Tahoma, sans-serif;
       color: #2563eb;
       font-weight: 1000;
       margin-bottom: .2rem;
       letter-spacing: 1px;
       background-image: linear-gradient(130deg, rgb(30, 40, 231) 80% , rgb(26, 25, 25) 15%);
-      /* background-image: radial-gradient(120deg, blue, red); */
+      
       background-clip: text;
       color:transparent;
       display: none;
@@ -79,7 +79,7 @@
         }
         .screen-inner button{
         margin-top:.55rem;
-        padding:.55rem .70rem;
+        padding:.45rem .6rem;
         border-radius:8px;
         border:none;
         background:#2563eb;;
@@ -89,7 +89,7 @@
         }
         .muted{
         color:#bbc6dc;
-        font-size:0.85rem;
+        font-size:0.90rem;
         line-height: 0.9rem;
         }
 
@@ -98,13 +98,12 @@
           padding:1.4rem;
         border-bottom:1px solid rgb(224, 225, 232);background:linear-gradient(180deg,#a2c0ff 0%, rgba(17,24,39,0.02) 100%);
         color:white;
-        /* animation: */
+        
         }
         #process-icon .circle{
           height: 1.5rem;
           width :1.5rem;
           border: 2px solid rgba(255, 255, 255, 0.417);
-          /* background:linear-gradient(180deg,#a2c0ff 0%, rgba(32, 58, 114, 0.975) 100%); */
           border-bottom:2px solid  rgb(104, 118, 225);
         color:white;
         border-radius:50%;
@@ -184,14 +183,12 @@
           margin-bottom: 1rem;
           cursor: pointer;
           border: none;
-          /* border-radius: 5px; */
           background-color: transparent;
 
         }
         .side-btn img{
           width:  1.5rem;
           height: 1.5rem;
-          /* background-color: #06b6d4; */
           border: 2px solid rgb(139, 136, 136);
           border-radius: 5px;
           padding: 0.1rem 0.1rem;
@@ -200,25 +197,14 @@
           color: darkblue;
 
         }
-        /* .side-btn span{
-          position:absolute;
-          left: 5rem;
-          border: 1px solid black;
-          border-radius: 10px;
-          background-color: black;
-          color: lightpink;
-          padding: 0.5rem;
-        } */
-        /* .hide{
-          display: none;
-        } */
+       
 
         /* card indicator and bottom */
     .card-slot{
         display:flex;
         align-items:center;
         justify-content:center;
-        padding:  1rem;
+       
         border-top:1px dashed rgba(2,6,23,0.04);
         }
         .indicator{
@@ -227,7 +213,7 @@
         border-radius:6px;
         background:linear-gradient(90deg,#2563eb,#06b6d4);
         opacity:.9;
-        margin: 0px;
+        
         }
         .bottom{
         display:flex;
@@ -248,8 +234,8 @@
       }
 
         #helpBtn{
-        width:40px;
-        height:36px;
+        width:36px;
+        height:35px;
         border-radius:8px;
         border:none;
         background:#fde68a;
